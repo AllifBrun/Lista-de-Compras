@@ -15,8 +15,38 @@
     --label: 600 16px/20px var(--inter);
     --paragraph: 400 16px/20px var(--inter);
     --link: 400 14px/16px var(--inter);
+    --sora: "Sora", sans-serif;
+    --quicklist: 700 26px/40px var(--sora);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: none;
 }
 
 h1{
     font: var(--title)
+}
+
+header div h1{
+    font: var(--quicklist);
+    color: var(--content-secondary);
+
+}
+.header-container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    svg{
+        width: 30px;
+        height: 23px;
+    }
+}
+
+body{
+    background-color: var(--background-primary);
 }
