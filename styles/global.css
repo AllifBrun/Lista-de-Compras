@@ -49,4 +49,60 @@ header div h1{
 
 body{
     background-color: var(--background-primary);
+    width: 1366px;
+    height: 768px;
+}
+
+.voltar{
+    display: flex;
+    width: 100%;
+    margin-left: 365px;
+    position: absolute;
+    align-items: center;
+    top: 127px;
+    color: var(--color-brand);
+    
+    svg {
+        color: var(--color-brand);
+        margin-right: 5px;
+    }
+  
+}
+
+.titulo{
+    font: var(--title);
+    color: var(--content-primary);
+    position: absolute;
+    top: 159px;
+    left: 365px;
+}
+
+.lista form{
+    position: absolute;
+    top: 235px;
+    left: 369px;
+}
+
+.lista form input{
+    color: var(--content-tertiary);
+    border-radius: 12px;
+    width: 451px;
+    height: 44px;
+    border: 1px solid var(--content-tertiary);
+    margin-right: 16px;
+}
+
+.lista form input::placeholder{
+    position: relative;
+    left: 18px;
+}
+
+.lista form button{
+    width: 160px;
+    height: 44px;
+    background-color: var(--color-brand);
+    border-radius: 12px;
+    color: white;
+    font: var(--label);
+    border: 1px solid var(--color-brand);
 }
