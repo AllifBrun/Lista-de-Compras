@@ -30,12 +30,18 @@ h1{
     font: var(--title)
 }
 
+header{
+    
+}
+
 header div h1{
     font: var(--quicklist);
     color: var(--content-secondary);
 
 }
 .header-container{
+    
+    width: 100%;
     margin-top: 25px;
     display: flex;
     justify-content: center;
@@ -49,15 +55,15 @@ header div h1{
 
 body{
     background-color: var(--background-primary);
-    width: 1366px;
+    width: 100vw;
     height: 768px;
 }
 
 .voltar{
     display: flex;
     width: 100%;
-    margin-left: 365px;
-    position: absolute;
+    margin-bottom: 16px;
+    
     align-items: center;
     top: 127px;
     color: var(--color-brand);
@@ -72,13 +78,14 @@ body{
 .titulo{
     font: var(--title);
     color: var(--content-primary);
-    position: absolute;
-    top: 159px;
-    left: 365px;
+  margin-bottom: 44px;
+}
+
+.lista{
+    width: 100%;
 }
 
 .lista form{
-    position: absolute;
     top: 235px;
     left: 369px;
 }
@@ -90,6 +97,9 @@ body{
     height: 44px;
     border: 1px solid var(--content-tertiary);
     margin-right: 16px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    overflow:visible;
 }
 
 .lista form input::placeholder{
@@ -105,4 +115,116 @@ body{
     color: white;
     font: var(--label);
     border: 1px solid var(--color-brand);
+}
+
+.lista form button:hover{
+    cursor: pointer;
+}
+
+
+
+.itens{
+    background-color: var(--background-primary);
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 12px;
+    border-radius: 12px;
+    div{
+        display: flex;
+        gap: 8.5px;
+        color: var(--content-secondary);
+        font: var(--paragraph);
+        input[type="checkbox"]{
+
+            width: 16px;
+            height: 16px;
+            border: 1px solid var(--border-primary);
+            border-radius: 6px;
+        }
+    }
+}
+
+.item{
+   background-color: white;
+   margin-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 12px;
+  padding-block: 16px;
+   border-radius: 12px;
+   width: 627px;
+   height: 49px;
+
+   p{
+    align-self: center;
+   }
+}
+
+.checado{
+    position: relative;
+}
+
+.checado svg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: -12px;
+    width: 15px;
+    height: 40px;
+
+    path{
+        color: white;
+    }
+}
+
+.item  input[type="checkbox"] {
+    appearance: none; /* Remove o estilo padrão do checkbox */
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--border-primary); /* Borda vermelha */
+    border-radius: 6px;
+    background-color: white; /* Cor de fundo */
+    cursor: pointer;
+}
+
+.item input[type="checkbox"]:hover{
+
+    border: 1px solid var(--border-hover); 
+}
+
+.item input[type="checkbox"]:checked {
+    background-color: var(--color-brand); /* Fundo vermelho quando marcado */
+}
+
+
+
+/* checkmark */
+.item input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.deletar{
+    align-self: right;
+    position: absolute;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    bottom: 16px;
+    cursor: pointer;
+}
+
+main{
+    margin-top: 62px;
+    padding-inline: 30vw;
+    min-width: 679px;
 }
