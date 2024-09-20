@@ -123,7 +123,7 @@ body{
 
 
 
-.itens{
+.itens, .remove-container{
     background-color: var(--background-primary);
     
     display: flex;
@@ -146,6 +146,11 @@ body{
     }
 }
 
+
+.remove-container{
+ margin-top: 0;
+}
+
 .item{
    background-color: white;
    margin-bottom: 20px;
@@ -162,6 +167,49 @@ body{
    }
 }
 
+.removido{
+    background-color: var(--color-danger);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 12px;
+    padding-block: 16px;
+     border-radius: 12px;
+     width: 627px;
+     height: 49px;
+  
+    div{
+        width: 18px;
+        height: 18px;
+        background-color: white;
+        border-radius: 100%;
+        position: relative;
+
+        p{
+            color: var(--color-danger);
+            position: absolute;
+            left: 6.5px;
+        }
+    }
+
+     p{
+      align-self: center;
+      color: var(--always-white);
+     }
+
+     h1{
+        position: absolute; 
+        right: 16px;
+        bottom: 10px;
+        color: white;
+
+       
+     }
+
+     h1:hover{
+        cursor: pointer;
+    }
+}
 .checado{
     position: relative;
 }

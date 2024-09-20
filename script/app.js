@@ -54,9 +54,55 @@ form.onsubmit = (e) => {
                     const itemPai = el.closest('.item'); 
                     itemPai.remove(); 
                     console.log('Item deletado!');
-                }
+
+                    mensagemDeletado()
+                } 
             };
         });
 
+       
+        
     }
 }
+
+function mensagemDeletado(){
+    const removeContainer = document.createElement('div')
+    removeContainer.className = 'remove-container'
+
+    const removido = document.createElement('div')
+    removido.className = 'removido'
+
+    const div = document.createElement('div')
+
+    const exclamacao = document.createElement('p')
+    exclamacao.innerText = '!'
+
+    const p = document.createElement('p')
+    p.innerText = 'O item foi removido da lista'
+
+    const h1 = document.createElement('h1')
+    h1.innerText = 'x'
+    h1.className = 'tira'
+
+
+    const main = document.querySelector('main')
+
+    main.appendChild(removeContainer)
+    removeContainer.appendChild(removido)
+    removido.appendChild(div)
+    div.appendChild(exclamacao)
+    removido.appendChild(p)
+    removido.appendChild(h1)
+
+
+}
+const main = document.querySelector('main')
+main.addEventListener('click', function(e){
+    const el = e.target;
+    if(el.classList.contains('tira')){
+       const itemPaiX = el.closest('.removido');
+        itemPaiX.remove()
+    }
+
+
+})
